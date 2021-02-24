@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "436407735256",
+    "project_id": "hasvi-20cbd",
+    "storage_bucket": "hasvi-20cbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436407735256:android:0d236a40518b7fc543d8ad",
+        "android_client_info": {
+          "package_name": "com.graylabs.hasvi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436407735256-v0ccq51ef0he7lao2jvf40njnq5s6ckg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.graylabs.hasvi",
+            "certificate_hash": "1e0f0ca03ff41539d211b6729b3fce1e79d00dec"
+          }
+        },
+        {
+          "client_id": "436407735256-c6dm503rcqkvs8qgp26as48c1n0pbgc6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLFCLgd0QqTzz2ZD-EJuXoFI95rErtcfw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436407735256-c6dm503rcqkvs8qgp26as48c1n0pbgc6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

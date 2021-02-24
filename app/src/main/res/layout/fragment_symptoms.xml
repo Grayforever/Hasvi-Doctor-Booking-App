@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.SymptomsFragment"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:clipToPadding="false">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/menu_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_menu"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/symptom_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/menu_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="?textAppearanceHeadline5"
+        android:text="Add Symptoms"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/widget_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/symptom_header"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="32dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="104dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/symptom_edittext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="Search"
+                app:layout_constraintHeight_percent="0.5"
+                android:background="@null"
+                android:padding="8dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/btn_frame"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_percent="0.5">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/add_sympt_btn"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="Add symptoms"
+                    app:icon="@drawable/ic_add"
+                    android:textAllCaps="false"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/find_doc_btn"
+                    android:layout_toEndOf="@+id/add_sympt_btn"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="Find your doctor"
+                    android:textSize="14sp"
+                    app:icon="@drawable/ic_search"
+                    app:backgroundTint="@color/colorPrimaryLight"
+                    android:textColor="@color/colorPrimary"
+                    app:iconTint="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    />
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="0dp"
+        android:layout_height="256dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/widget_card"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Malaria"
+            style="@style/Widget.MaterialComponents.Chip.Entry"
+            />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Proceed"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

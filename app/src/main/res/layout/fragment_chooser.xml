@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.ChooserFragment"
+    android:padding="16dp"
+    android:clipToPadding="false"
+    android:id="@+id/chooser_root">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/chooser_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Profile photo"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/from_gallery_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooser_header"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_folder"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/from_camera_view"
+        app:layout_constraintStart_toEndOf="@+id/from_gallery_view"
+        app:layout_constraintTop_toBottomOf="@+id/chooser_header"
+        app:layout_constraintEnd_toStartOf="@+id/remove_image_view"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_camera"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:id="@+id/remove_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/chooser_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_remove"
+        android:visibility="invisible"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

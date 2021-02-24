@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.PhoneAuthFragment"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:clipToPadding="false">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/phone_header"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_back"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_header"
+        app:layout_constraintStart_toEndOf="@+id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="?textAppearanceHeadline6"
+        android:text="Continue with phone"
+        android:gravity="center"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="192dp"
+        android:id="@+id/otp_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_header"
+        app:srcCompat="@drawable/ic_otp"
+        android:layout_marginTop="32dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_sub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_image"
+        android:textAppearance="?textAppearanceBody1"
+        android:text="You'll receive a 6 digit code \nto verify next"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+
+    <LinearLayout
+        android:id="@+id/cc_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/phone_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_sub"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_layout"
+        app:layout_constraintWidth_percent="0.3"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:background="@drawable/outline_box"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/flag_image"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="4dp"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cc_edit_text"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:textAppearance="?textAppearanceButton"
+            />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_layout"
+        app:layout_constraintStart_toEndOf="@+id/cc_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_sub"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phone_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your phone"
+            android:textSize="18sp"
+            android:inputType="phone"
+            android:imeOptions="actionDone"
+            android:maxLength="10"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/continue_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_layout"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

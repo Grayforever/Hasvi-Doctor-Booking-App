@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bitvale.switcher.SwitcherX
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/location_btn"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:checked="false"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:id="@+id/loc_view"
+        app:layout_constraintEnd_toStartOf="@+id/location_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        app:srcCompat="@drawable/ic_location"
+        />
+ 
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/widget_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_btn"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        app:cardCornerRadius="8dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="false"
+        app:cardBackgroundColor="@color/colorPrimaryLight">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/main_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?textAppearanceHeadline5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/fab_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/main_header"
+                app:layout_constraintBottom_toTopOf="@id/search_edit_text"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/heart_fab"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tooth_fab"
+                    app:backgroundTint="@android:color/white"
+                    app:srcCompat="@drawable/ic_cardiology"
+                    app:tint="@null"
+                    app:elevation="0dp"
+                    />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tooth_fab"
+                    app:layout_constraintStart_toEndOf="@id/heart_fab"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/eye_fab"
+                    app:backgroundTint="@android:color/white"
+                    app:srcCompat="@drawable/ic_tooth"
+                    app:tint="@null"
+                    app:elevation="0dp"
+                    />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eye_fab"
+                    app:layout_constraintStart_toEndOf="@id/tooth_fab"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/stomach_fab"
+                    app:backgroundTint="@android:color/white"
+                    app:srcCompat="@drawable/ic_eye"
+                    app:tint="@null"
+                    app:elevation="0dp"
+                    />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stomach_fab"
+                    app:layout_constraintStart_toEndOf="@id/eye_fab"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:backgroundTint="@android:color/white"
+                    app:srcCompat="@drawable/ic_stomach"
+                    app:tint="@null"
+                    app:elevation="0dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:id="@+id/search_edit_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:hint="@string/search"
+                android:drawableStart="@drawable/ic_search"
+                android:background="@drawable/rounded_bg"
+                android:drawablePadding="8dp"
+                android:drawableTint="?colorControlNormal"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/category_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/doctors_list"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintEnd_toStartOf="@id/view_all_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/widget_card"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/view_all_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/widget_card"
+        app:layout_constraintStart_toEndOf="@+id/category_header"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/view_all"
+        android:textAppearance="?textAppearanceBody2"
+        android:padding="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="0dp"
+        android:layout_height="224dp"
+        android:id="@+id/carousel_scroller"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_header"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:paddingEnd="@dimen/card_padding"
+        android:paddingStart="@dimen/card_padding"
+        android:overScrollMode="never"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/recomm_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Recommended"
+        android:textAppearance="?textAppearanceBody1"
+        app:layout_constraintEnd_toStartOf="@id/rec_view_all_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carousel_scroller"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rec_view_all_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/carousel_scroller"
+        app:layout_constraintStart_toEndOf="@+id/category_header"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/view_all"
+        android:textAppearance="?textAppearanceBody2"
+        android:padding="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/recommended_recycler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recomm_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
